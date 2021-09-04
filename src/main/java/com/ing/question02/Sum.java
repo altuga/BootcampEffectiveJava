@@ -1,6 +1,8 @@
 package com.ing.question02;
 
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * Altug Bilgin Altintas
  * 
@@ -17,13 +19,23 @@ TODO
 */
 public class Sum {
     private static long sum() {
-        Long sum = 0L;
+        long sum = 0L;
+        // int , double, long, float, short, boolean, char, byte
+        // Integer, Double Long, Float, Short, Boolean, Char, Byte
+
         for (long i = 0; i <= Integer.MAX_VALUE; i++)
-            sum += i;
+            sum += i; // autoboxing
         return sum;
     }
 
     public static void main(String[] args) {
+
+        long start = System.nanoTime(); // always use nanotTime for accuracy
         sum();
+        long end = System.nanoTime();
+        System.out.println(  TimeUnit.MILLISECONDS.convert( (end - start), TimeUnit.NANOSECONDS) +  " ms..");
+
+
+
     }
 }

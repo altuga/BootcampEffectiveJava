@@ -31,7 +31,10 @@ public final class PhoneNumber {
         return (short) val;
     }
 
-
+    @Override
+    public int hashCode() {
+        return 42;
+    }
 
     @Override public boolean equals(Object o) {
         if (o == this)
