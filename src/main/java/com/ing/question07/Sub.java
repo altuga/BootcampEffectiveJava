@@ -16,12 +16,13 @@ TODO:
  3 - Instructor will show the solutions
  4 - Refactor and ask questions 
 */
+import java.math.BigDecimal;
 import java.time.Instant;
 
 public final class Sub extends Super {
 
     // Blank final, set by constructor
-    private final Instant instant;
+    private final Instant instant ;
 
     Sub() {
         instant = Instant.now();
@@ -36,5 +37,6 @@ public final class Sub extends Super {
     public static void main(String[] args) {
         Sub sub = new Sub();
         sub.overrideMe();
+
     }
 }

@@ -20,9 +20,13 @@ TODO:
 public class Adult {
     public static void main(String[] args) {
 
-        Room room = new Room(10);
+        try(Room room = new Room(10)){
+            System.out.println("Temizlik basliyorrrr"); // clean numJunkPiles to zero
+        };
+
+
         //Clean the room automagically
-        System.out.println(room.numJunkPiles); // clean numJunkPiles to zero
+
 
 
     }
