@@ -23,10 +23,10 @@ public class App
     public static void main( String[] args )
     {
         Date start = new Date();
-        Date end = new Date();
-        Period p = new Period(start, end);
-        System.out.println(p.end());
+        Date end = new Date(); // 2021
+        Period p = new Period(start, end); // 2021
+        System.out.println(p.end()); // 2021
         end.setYear(78); // Modifies internals of p!
-        System.out.println(p.end());
+        System.out.println(p.end()); // 1978
     }
 }

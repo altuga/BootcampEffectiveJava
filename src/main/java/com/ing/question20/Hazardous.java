@@ -11,15 +11,21 @@ TODO
 */
 public class Hazardous {
 
+    public static void calculate(int... values) {
+        System.out.println(values.length);
+    }
 
-    static void hazardous( List<String>... stringLists) {
+    @SafeVarargs
+    static <T> void hazardous(List<? extends T>... stringLists) {
         List<Integer> intList = List.of(42);
         Object[] objects = stringLists;
         objects[0] = intList; // Heap pollution
-        String s = stringLists[0].get(0); // ClassCastException
+        Integer s = (Integer)stringLists[0].get(0); // ClassCastException
+
     }
 
     public static void main(String[] args) {
         hazardous(List.of("I love JUG Istanbul and Java Day Istanbul"));
+        calculate(2,4,5,6,7,7);
     }
 }
