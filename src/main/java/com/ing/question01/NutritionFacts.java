@@ -12,41 +12,38 @@ TODO:
  2 - Instructor will show the solutions
  3 - Refactor and ask questions
  */
-public final class NutritionFacts {
+public class NutritionFacts {
 
-    private final int servingSize ; // must
-    private final int servings ; // must
-    private final int calories ; // optional
-    private final int fat ;  // optional
-    private final int sodium ; // optional
-    private final int carbohydrate ; // optional
+    private int servingSize; // must
+    private int servings; // must
+    private int calories; // optional
+    private int fat;  // optional
+    private int sodium; // optional
+    private int carbohydrate; // optional
 
-    public NutritionFacts(int servingSize, int servings) {
-        this(servingSize, servings, 0);
+    // Setters
+    public void setServingSize(int val) {
+        servingSize = val;
     }
 
-    public NutritionFacts(int servingSize, int servings, int calories) {
-        this(servingSize, servings, calories, 0);
+    public void setServings(int val) {
+        servings = val;
     }
 
-    public NutritionFacts(int servingSize, int servings, int calories, int fat) {
-        this(servingSize, servings, calories, fat, 0);
+    public void setCalories(int val) {
+        calories = val;
     }
 
-    public NutritionFacts(int servingSize, int servings, int calories, int fat,
-                          int sodium) {
-        this(servingSize, servings, calories, fat, sodium, 0);
+    public void setFat(int val) {
+        fat = val;
     }
 
+    public void setSodium(int val) {
+        sodium = val;
+    }
 
-    public NutritionFacts(int servingSize, int servings, int calories, int fat,
-                          int sodium, int carbohydrate) {
-        this.servingSize = servingSize;
-        this.servings = servings;
-        this.calories = calories;
-        this.fat = fat;
-        this.sodium = sodium;
-        this.carbohydrate = carbohydrate;
+    public void setCarbohydrate(int val) {
+        carbohydrate = val;
     }
 
     @Override
@@ -62,8 +59,14 @@ public final class NutritionFacts {
     }
 
     public static void main(String[] args) {
+        NutritionFacts nutritionFacts = new NutritionFacts();
+        nutritionFacts.setFat(20);
+        nutritionFacts.setServingSize(100);
+        System.out.println(nutritionFacts);
 
-        NutritionFacts nutritionFacts = new NutritionFacts(20,34,230);
+        //...
+
+        nutritionFacts.setServingSize(150);
         System.out.println(nutritionFacts);
 
     }

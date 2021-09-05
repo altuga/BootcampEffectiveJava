@@ -22,3 +22,5 @@ Pass by ref ile value arasındaki farkı gösteren gif : https://blog.penjee.com
 https://en.wikipedia.org/wiki/Poka-yoke
 
 https://en.wikipedia.org/wiki/Heap_pollution
+
+https://projectlombok.org/
