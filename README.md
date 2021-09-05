@@ -24,3 +24,8 @@ https://en.wikipedia.org/wiki/Poka-yoke
 https://en.wikipedia.org/wiki/Heap_pollution
 
 https://projectlombok.org/
+
+https://refactoring.guru/
+
+https://deviq.com/design-patterns/strategy-pattern
+https://docs.gitlab.com/ee/development/fe_guide/design_anti_patterns.html
